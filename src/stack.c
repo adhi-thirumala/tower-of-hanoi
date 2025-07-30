@@ -2,7 +2,7 @@
 
 #include <stdlib.h>
 
-Stack *createstack(int capacity) {
+Stack *create_stack(int capacity) {
 Stack *stack = malloc(sizeof(Stack));
 stack->capacity = capacity;
 stack->top = -1;
@@ -21,6 +21,14 @@ int pop(Stack *stack) {
 
 int peek(Stack *stack) { return stack->data[stack->top]; }
 
-int isEmpty(Stack *stack) { return stack->top == -1; }
+int is_empty(Stack *stack) { return stack->top == -1; }
 
-int isFull(Stack *stack) { return stack->top == stack->capacity - 1; }
+int is_full(Stack *stack) { return stack->top == stack->capacity - 1; }
+
+int size(Stack *stack) { return stack->top + 1; }
+
+
+void free_stack(Stack *stack) {
+  free(stack->data);
+  free(stack);
+}

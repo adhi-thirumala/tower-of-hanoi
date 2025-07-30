@@ -8,11 +8,13 @@ typedef struct stack {
   int capacity;
 } Stack;
 
-Stack* createstack(int capacity);
+Stack* create_stack(int capacity);
 void push(Stack *stack, int item);
 int pop(Stack *stack);
 int peek(Stack *stack);
-int isEmpty(Stack *stack);
-int isFull(Stack *stack);
+int is_empty(Stack *stack);
+int is_full(Stack *stack);
+int size(Stack *stack);
+void free_stack(Stack *stack);
 
 #endif
