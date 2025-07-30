@@ -1,0 +1,7 @@
+[
+  {
+    "directory": "/home/adhi/tower-of-hanoi",
+    "file": "src/main.c",
+    "command": "clang -std=c23 -Wall -Wextra -Werror -pedantic -g -O2 -I./include -o out/tower-of-hanoi src/main.c src/solver.c src/stack.c src/tower-of-hanoi.c"
+  }
+]
